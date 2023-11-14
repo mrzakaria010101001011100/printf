@@ -109,16 +109,19 @@ int print_reverse(va_list types, char buffer[],
 	char *str;
 	int i, count = 0;
 
+	UNUSED(buffer);
 	UNUSED(flags);
 	UNUSED(width);
-	UNUSED(precision);
 	UNUSED(size);
+	UNUSED(precision);
 
 	str = va_arg(types, char *);
 
 	if (str == NULL)
 	{
-		str = "(null)";
+		UNUSED(precision);
+
+		str = "(NULL)";
 	}
 	for (i = 0; str[i]; i++)
 		;
