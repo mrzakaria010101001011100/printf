@@ -5,9 +5,9 @@
  * @list: List of arguments to be printed.
  * @ind: ind.
  * @buffer: Buffer array to handle print.
- * @flags: active flags
+ * @flags: Calculates active flags
  * @width: get width.
- * @precision: Precision specify
+ * @precision: Precision specification
  * @size: Size specifier
  * Return: 1 or 2;
  */
