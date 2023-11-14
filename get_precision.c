@@ -1,10 +1,22 @@
 #include "main.h"
+#include <stdbool.h>
 
 /**
- * get_precision - Calculates the precision for printing
- * @format: Formatted string to print the arguments
- * @i: arguments to be printed.
- * @list: list of arguments.
+ * is_digit - Checks if a character is a digit.
+ * @c: The character to check.
+ *
+ * Return: true if the character is a digit, false otherwise.
+ */
+bool is_digit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+/**
+ * get_precision - Calculates the precision for printing.
+ * @format: Formatted string in which to print the arguments.
+ * @i: List of arguments to be printed.
+ * @list: List of arguments.
  *
  * Return: Precision.
  */
@@ -32,7 +44,9 @@ int get_precision(const char *format, int *i, va_list list)
 			break;
 		}
 		else
+		{
 			break;
+		}
 	}
 
 	*i = curr_i - 1;
